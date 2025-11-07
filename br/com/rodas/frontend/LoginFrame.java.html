@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>LoginFrame.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #fd0001;}
+.s1 { color: #00fd92;}
+.s2 { color: #c4bfbc;}
+.s3 { color: #6aab73;}
+.s4 { color: #2a31b8;}
+.s5 { color: #7a8581;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+LoginFrame.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">br</span><span class="s2">.</span><span class="s1">com</span><span class="s2">.</span><span class="s1">rodas</span><span class="s2">.</span><span class="s1">frontend</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">br</span><span class="s2">.</span><span class="s1">com</span><span class="s2">.</span><span class="s1">rodas</span><span class="s2">.</span><span class="s1">frontend</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ThemeUtil</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">com</span><span class="s2">.</span><span class="s1">formdev</span><span class="s2">.</span><span class="s1">flatlaf</span><span class="s2">.</span><span class="s1">FlatLightLaf</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">javax</span><span class="s2">.</span><span class="s1">swing</span><span class="s2">.*;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.*;</span>
+
+<span class="s0">public class </span><span class="s1">LoginFrame </span><span class="s0">extends </span><span class="s1">JFrame </span><span class="s2">{</span>
+    <span class="s0">public </span><span class="s1">LoginFrame</span><span class="s2">() {</span>
+        <span class="s0">super</span><span class="s2">(</span><span class="s3">&quot;Login - Sistema Rodas&quot;</span><span class="s2">);</span>
+        <span class="s1">setDefaultCloseOperation</span><span class="s2">(</span><span class="s1">JFrame</span><span class="s2">.</span><span class="s1">EXIT_ON_CLOSE</span><span class="s2">);</span>
+        <span class="s1">setSize</span><span class="s2">(</span><span class="s4">420</span><span class="s2">,</span><span class="s4">260</span><span class="s2">);</span>
+        <span class="s1">setLocationRelativeTo</span><span class="s2">(</span><span class="s0">null</span><span class="s2">);</span>
+        <span class="s1">setLayout</span><span class="s2">(</span><span class="s0">new </span><span class="s1">BorderLayout</span><span class="s2">());</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">getContentPane</span><span class="s2">() </span><span class="s0">instanceof </span><span class="s1">JComponent</span><span class="s2">) {</span>
+            <span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">applyBackground</span><span class="s2">((</span><span class="s1">JComponent</span><span class="s2">) </span><span class="s1">getContentPane</span><span class="s2">());</span>
+        <span class="s2">}</span>
+
+
+        <span class="s1">JPanel panel </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPanel</span><span class="s2">(</span><span class="s0">new </span><span class="s1">BorderLayout</span><span class="s2">());</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">setBorder</span><span class="s2">(</span><span class="s1">BorderFactory</span><span class="s2">.</span><span class="s1">createEmptyBorder</span><span class="s2">(</span><span class="s4">16</span><span class="s2">,</span><span class="s4">16</span><span class="s2">,</span><span class="s4">16</span><span class="s2">,</span><span class="s4">16</span><span class="s2">));</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">BG</span><span class="s2">);</span>
+
+        <span class="s1">JLabel title </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s3">&quot;Entrar&quot;</span><span class="s2">); </span><span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">stylePrimaryLabel</span><span class="s2">(</span><span class="s1">title</span><span class="s2">, </span><span class="s4">20f</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">title</span><span class="s2">, </span><span class="s1">BorderLayout</span><span class="s2">.</span><span class="s1">NORTH</span><span class="s2">);</span>
+
+        <span class="s1">JPanel center </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPanel</span><span class="s2">(</span><span class="s0">new </span><span class="s1">GridLayout</span><span class="s2">(</span><span class="s4">2</span><span class="s2">,</span><span class="s4">2</span><span class="s2">,</span><span class="s4">8</span><span class="s2">,</span><span class="s4">8</span><span class="s2">));</span>
+        <span class="s1">center</span><span class="s2">.</span><span class="s1">setBorder</span><span class="s2">(</span><span class="s1">BorderFactory</span><span class="s2">.</span><span class="s1">createEmptyBorder</span><span class="s2">(</span><span class="s4">12</span><span class="s2">,</span><span class="s4">0</span><span class="s2">,</span><span class="s4">12</span><span class="s2">,</span><span class="s4">0</span><span class="s2">));</span>
+        <span class="s1">center</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">BG</span><span class="s2">);</span>
+        <span class="s1">center</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s3">&quot;Usuário:&quot;</span><span class="s2">));</span>
+        <span class="s1">JTextField txtUser </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JTextField</span><span class="s2">();</span>
+        <span class="s1">center</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">txtUser</span><span class="s2">);</span>
+        <span class="s1">center</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s3">&quot;Senha:&quot;</span><span class="s2">));</span>
+        <span class="s1">JPasswordField txtPass </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPasswordField</span><span class="s2">();</span>
+        <span class="s1">center</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">txtPass</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">center</span><span class="s2">, </span><span class="s1">BorderLayout</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+
+        <span class="s1">JPanel bottom </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPanel</span><span class="s2">(</span><span class="s0">new </span><span class="s1">FlowLayout</span><span class="s2">(</span><span class="s1">FlowLayout</span><span class="s2">.</span><span class="s1">RIGHT</span><span class="s2">));</span>
+        <span class="s1">bottom</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">BG</span><span class="s2">);</span>
+        <span class="s1">JButton btnLogin </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s3">&quot;Entrar&quot;</span><span class="s2">); </span><span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">styleButton</span><span class="s2">(</span><span class="s1">btnLogin</span><span class="s2">, </span><span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">BTN_BACK</span><span class="s2">);</span>
+        <span class="s1">JButton btnGuest </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s3">&quot;Entrar como Convidado&quot;</span><span class="s2">); </span><span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">styleButton</span><span class="s2">(</span><span class="s1">btnGuest</span><span class="s2">, </span><span class="s1">ThemeUtil</span><span class="s2">.</span><span class="s1">BTN_ADD</span><span class="s2">);</span>
+        <span class="s1">bottom</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btnGuest</span><span class="s2">); </span><span class="s1">bottom</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btnLogin</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">bottom</span><span class="s2">, </span><span class="s1">BorderLayout</span><span class="s2">.</span><span class="s1">SOUTH</span><span class="s2">);</span>
+
+        <span class="s1">add</span><span class="s2">(</span><span class="s1">panel</span><span class="s2">, </span><span class="s1">BorderLayout</span><span class="s2">.</span><span class="s1">CENTER</span><span class="s2">);</span>
+
+        <span class="s1">btnLogin</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s1">e -&gt; </span><span class="s2">{</span>
+            <span class="s5">// no real validation for now</span>
+            <span class="s1">MenuPrincipal m </span><span class="s2">= </span><span class="s0">new </span><span class="s1">MenuPrincipal</span><span class="s2">();</span>
+            <span class="s1">m</span><span class="s2">.</span><span class="s1">setVisible</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+            <span class="s0">this</span><span class="s2">.</span><span class="s1">dispose</span><span class="s2">();</span>
+        <span class="s2">});</span>
+        <span class="s1">btnGuest</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s1">e -&gt; </span><span class="s2">{</span>
+            <span class="s1">MenuPrincipal m </span><span class="s2">= </span><span class="s0">new </span><span class="s1">MenuPrincipal</span><span class="s2">();</span>
+            <span class="s1">m</span><span class="s2">.</span><span class="s1">setVisible</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+            <span class="s0">this</span><span class="s2">.</span><span class="s1">dispose</span><span class="s2">();</span>
+        <span class="s2">});</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s5">// apply FlatLaf</span>
+        <span class="s0">try </span><span class="s2">{</span>
+            <span class="s1">UIManager</span><span class="s2">.</span><span class="s1">setLookAndFeel</span><span class="s2">(</span><span class="s0">new </span><span class="s1">FlatLightLaf</span><span class="s2">());</span>
+        <span class="s2">} </span><span class="s0">catch </span><span class="s2">(</span><span class="s1">Exception ex</span><span class="s2">) { </span><span class="s5">/* fallback */ </span><span class="s2">}</span>
+        <span class="s1">SwingUtilities</span><span class="s2">.</span><span class="s1">invokeLater</span><span class="s2">(() </span><span class="s1">-&gt; </span><span class="s0">new </span><span class="s1">LoginFrame</span><span class="s2">().</span><span class="s1">setVisible</span><span class="s2">(</span><span class="s0">true</span><span class="s2">));</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
